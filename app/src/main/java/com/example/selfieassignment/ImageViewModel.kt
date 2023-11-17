@@ -89,7 +89,7 @@ class ImageViewModel(application: Application) : AndroidViewModel(application) {
                 Log.d(ContentValues.TAG, "Image URL saved in the database")
             }
             .addOnFailureListener {
-                // Handle any errors saving data to the database
+
                 Log.e(ContentValues.TAG, "Failed to save image URL to the database", it)
             }
     }

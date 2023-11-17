@@ -1,7 +1,6 @@
 package com.example.selfieassignment
 
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle

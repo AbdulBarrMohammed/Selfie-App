@@ -17,6 +17,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.selfieassignment.databinding.FragmentMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -30,13 +31,9 @@ class MainFragment : Fragment(), SensorEventListener {
     private lateinit var imageAdapter: ImageAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+
         _binding = FragmentMainBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         imageViewModel = ViewModelProvider(this).get(ImageViewModel::class.java)
         imageAdapter = ImageAdapter { imageUrl ->
             // navigates to full screen when image is clicked
@@ -51,7 +48,9 @@ class MainFragment : Fragment(), SensorEventListener {
         binding.logout.setOnClickListener {
             signOut()
         }
+        return binding.root
     }
+
     private fun navigateToFullScreenImage(imageUrl: String) {
         // Define the navigation action with the imageUrl as argument
         val action = MainFragmentDirections.actionMainFragmentToFullScreenFragment(imageUrl)
@@ -79,7 +78,15 @@ class MainFragment : Fragment(), SensorEventListener {
      * @return none
      */
     private fun setupRecyclerView() {
+        //val spanCount = 2 // Adjust the number as per your design needs
+
+        // Set the RecyclerView to use the StaggeredGridLayoutManager with vertical orientation
+        //val layoutManager = StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
+
+        // Optionally, you can define the gap strategy for the StaggeredGridLayoutManager
+
         binding.rvImage.layoutManager = LinearLayoutManager(context)
+        //binding.rvImage.layoutManager = layoutManager
         binding.rvImage.adapter = imageAdapter
     }
 
