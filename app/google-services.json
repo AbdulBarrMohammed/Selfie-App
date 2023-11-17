@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600830468191",
+    "project_id": "selfieassignment",
+    "storage_bucket": "selfieassignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600830468191:android:1c7d9bb3bdc46d82627bea",
+        "android_client_info": {
+          "package_name": "com.example.selfieassignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF6WihP6stfAfyrIQvhT1Ak7DuzruP390"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

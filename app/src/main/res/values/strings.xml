@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Project6</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">Save</string>
+    <string name="notes">Notes</string>
+    <string name="signin">Sign In</string>
+    <string name="enterPassWord">enter you password</string>
+    <string name="clickSignIn">Click to sign in</string>
+    <string name="notRegistered">Not Registered Yet?</string>
+    <string name="signup">Sign Up</string>
+    <string name="enterEmail">enter your email</string>
+    <string name="reEnterPassWord">re-enter you password</string>
+    <string name="register">Click to register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signout">Sign Out</string>
+    <string name="takePhoto">Take Photo</string>
+</resources>
