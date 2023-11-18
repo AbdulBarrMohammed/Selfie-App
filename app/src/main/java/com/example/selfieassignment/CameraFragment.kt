@@ -81,7 +81,7 @@ class CameraFragment : Fragment() {
     private fun takePhoto() {
         val name = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(System.currentTimeMillis())
 
-        // Create a file to save the captured image in
+        // Creates a file to save the captured image in
         val imageFile = File(imageCaptureDirectory, "$name.jpg")
 
         val outputOptions = ImageCapture.OutputFileOptions.Builder(imageFile).build()

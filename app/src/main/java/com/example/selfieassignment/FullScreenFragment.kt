@@ -36,7 +36,6 @@ class FullScreenFragment : Fragment(), SensorEventListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         sensorManager = requireActivity().getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
@@ -62,7 +61,7 @@ class FullScreenFragment : Fragment(), SensorEventListener {
     override fun onSensorChanged(event: SensorEvent?) {
         val curTime = System.currentTimeMillis()
 
-        // only allow one update every 100ms.
+        // only allows one update every 100ms.
         if ((curTime - lastUpdate) > 100) {
             val diffTime = (curTime - lastUpdate)
             lastUpdate = curTime
@@ -74,7 +73,7 @@ class FullScreenFragment : Fragment(), SensorEventListener {
             val speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
 
             if (speed > SHAKE_THRESHOLD) {
-                // navigate to CameraActivity if phone is shaken
+                // navigates to CameraActivity if phone is shaken
                 if (findNavController().currentDestination?.id == R.id.fullScreenFragment) {
                     findNavController().navigate(R.id.action_fullScreenFragment_to_cameraFragment)
 

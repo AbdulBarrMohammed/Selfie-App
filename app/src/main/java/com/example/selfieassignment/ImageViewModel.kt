@@ -43,7 +43,7 @@ class ImageViewModel(application: Application) : AndroidViewModel(application) {
 
             override fun onCancelled(error: DatabaseError) {
                 Log.w(ContentValues.TAG, "loadPost:onCancelled", error.toException())
-                // Handle error
+                // Handles error
             }
         })
     }
@@ -56,18 +56,18 @@ class ImageViewModel(application: Application) : AndroidViewModel(application) {
         val imageName = imageUri.lastPathSegment ?: "image_${System.currentTimeMillis()}"
         val storageReference = FirebaseStorage.getInstance().reference.child("images/$userId/$imageName")
 
-        // upload the image to Firebase Storage under the user's folder
+        // uploads the image to Firebase Storage under the user's folder
         storageReference.putFile(imageUri)
             .addOnSuccessListener { taskSnapshot ->
-                // get the download URL
+                // gets the download URL
                 taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
                     val downloadUrl = uri.toString()
-                    // Save the image data to Firebase Realtime Database under the users node
+                    // Saves the image data to Firebase Realtime Database under the users node
                     saveImageUrlToDatabase(downloadUrl, userId)
                 }
             }
             .addOnFailureListener { exception ->
-                // Handle any upload errors
+                // Handles any upload errors
                 Log.e(ContentValues.TAG, "Image upload failed", exception)
             }
     }

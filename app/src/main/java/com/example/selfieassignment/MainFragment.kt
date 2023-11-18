@@ -52,7 +52,7 @@ class MainFragment : Fragment(), SensorEventListener {
     }
 
     private fun navigateToFullScreenImage(imageUrl: String) {
-        // Define the navigation action with the imageUrl as argument
+        // Defines the navigation action with the imageUrl as argument
         val action = MainFragmentDirections.actionMainFragmentToFullScreenFragment(imageUrl)
         findNavController().navigate(action)
 
@@ -78,12 +78,6 @@ class MainFragment : Fragment(), SensorEventListener {
      * @return none
      */
     private fun setupRecyclerView() {
-        //val spanCount = 2 // Adjust the number as per your design needs
-
-        // Set the RecyclerView to use the StaggeredGridLayoutManager with vertical orientation
-        //val layoutManager = StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
-
-        // Optionally, you can define the gap strategy for the StaggeredGridLayoutManager
 
         binding.rvImage.layoutManager = LinearLayoutManager(context)
         //binding.rvImage.layoutManager = layoutManager
