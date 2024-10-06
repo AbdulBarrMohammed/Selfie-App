@@ -31,7 +31,7 @@ The following **extensions** are implemented:
 Here's a walkthrough of implemented user stories:
 
 
-![SortiFoxDemo](https://github.com/user-attachments/assets/a62ad81f-a04c-4b49-ad0e-0ce66dd5b8d8)
+![project9](https://github.com/AbdulBarrMohammed/SelfieApp/assets/106573767/c899dc3e-1ae3-480c-96d9-f0c2820c6c63)
 
 <img src='walkthrough.gif' title='Video Walkthrough' width='60%' alt='Video Walkthrough' />
 
